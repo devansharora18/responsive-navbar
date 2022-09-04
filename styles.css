@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	background-color: #24252A;
+}
+
+li, a, button, .logo {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+	color: whitesmoke;
+	text-decoration: none;
+}
+
+#click {
+	display: none;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.nav__links {
+	list-style: none;
+}
+
+.nav__links li {
+	display: inline-block;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.nav__links li a {
+	transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover, .active {
+	color: #0088A9;
+}
+
+button {
+	padding-top: 9px;
+	padding-bottom: 9px;
+	padding-left: 25px;
+	padding-right: 25px;
+	background-color: rgba(0, 136, 169, 1);
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+
+button:hover {
+	background-color: rgba(0, 136, 169, 0.8);
+}
+
+.logo {
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.menu-btn {
+	color: white;
+	display: none;
+	cursor: pointer;
+	padding-left: 10px;
+}
+
+@media (max-width: 1250px) {
+	.nav__links {
+		position: fixed;
+		top: 80px;
+		left: -100%;
+		background-color: #24252A;
+		height: 100vh;
+		width: 100%;
+		display: block;
+		text-align: center;
+		transition: all 0.3s ease;
+	}
+
+	.cta {
+		display: inline-flex;
+		position: fixed;
+		bottom: 80px;
+		width: 100vw;
+		left: -100;
+		justify-content: center;
+		transition: all 0.3s ease;
+	}
+
+
+	#click:not(:checked) ~ .nav__links{
+		left: -100%;
+	}
+	
+	#click:not(:checked) ~ .cta{
+		left: -100%;
+	}
+
+	#click:checked ~ .nav__links {
+		left: 0%;
+	}
+
+	#click:checked ~ .cta{
+		left: 0%;
+	}
+
+	#click:checked ~ .menu-btn i:before {
+		content: "\f00d";
+	}
+
+	.nav__links li {
+		display: block;
+		margin-top: 40px;
+	}
+
+	.menu-btn {
+		display: inline-block;
+	}
+}
