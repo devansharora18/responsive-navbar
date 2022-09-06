@@ -20,6 +20,7 @@ li, a, button, .logo {
 }
 
 header {
+	position: fixed;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -27,6 +28,7 @@ header {
 	padding-bottom: 30px;
 	padding-left: 10%;
 	padding-right: 10%;
+	width: 100vw;
 }
 
 .nav__links {
