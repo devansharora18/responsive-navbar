@@ -1,7 +1,7 @@
 # responsive-navbar
  Responsive navbar made from pure css
  
- https://art3mistical.github.io/responsive-navbar
+ https://devansharora18.github.io/responsive-navbar
 
 ![image](https://user-images.githubusercontent.com/68769374/188292888-8caf6416-c814-43bd-8c61-64f66eaa4b0e.png)
 
